@@ -29,6 +29,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio:
+  flutter_polyline_points:
+  google_maps_flutter:
   carousel_slider:
   animated_splash_screen: ^1.3.0
   smooth_page_indicator:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class LocationPage extends StatefulWidget {
   const LocationPage({Key? key}) : super(key: key);
@@ -8,20 +9,22 @@ class LocationPage extends StatefulWidget {
 }
 
 class _LocationPageState extends State<LocationPage> {
-
-  /*static const _initialCameraPosition = CameraPosition(
-      target: LatLng(37.773972, -122.431297),
-      zoom: 11.5,
-  ); */
+  static const _initialCameraPosition = CameraPosition(
+    target: LatLng(50.465702, 30.484692),
+    zoom: 11.5,
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      body: GoogleMap(
+        initialCameraPosition: _initialCameraPosition,
+        myLocationButtonEnabled: false,
+        zoomControlsEnabled: false,
+      ),
     );
   }
 }
-
 
 /* GoogleMap(
         myLocationButtonEnabled: false,
