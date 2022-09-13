@@ -35,8 +35,9 @@ dependencies:
   carousel_slider:
   animated_splash_screen: ^1.3.0
   smooth_page_indicator:
-  #google_maps_flutter:
-
+  permission_handler:
+  geolocator:
+  geocoding:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -70,6 +71,7 @@ flutter:
     - assets/images/carousel1.png
     - assets/images/carousel2.png
     - assets/images/carousel3.png
+    - assets/images/strict_discipline.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -82,7 +84,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+     - family: Rubik
+       fonts:
+         - asset: assets/fonts/Rubik/Rubik-Medium.ttf
+           weight: 500
+         - asset: assets/fonts/Rubik/Rubik-SemiBold.ttf
+           weight: 600
+         - asset: assets/fonts/Rubik/Rubik-Bold.ttf
+           weight: 700
+  #      - asset: fonts/Poppins-Bold.ttf
+  #       - asset: fonts/Poppins-Medium.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

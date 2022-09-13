@@ -1,30 +1,30 @@
 
-class SlideItem {
+class SlideModel {
   String imageUrl;
   String title;
   String description;
 
-  SlideItem({
+  SlideModel({
     required this.imageUrl,
     required this.title,
     required this.description,
   });
 }
 
-List<SlideItem> slideList = [
-  SlideItem(
+List<SlideModel> slideList = [
+  SlideModel(
     imageUrl: 'assets/images/carousel1.png',
     title: 'Новини НАСОА',
     description:
         'Дізнавайся та ділись новинами про Національну академію статистики, обліку й аудиту',
   ),
-  SlideItem(
+  SlideModel(
     imageUrl: 'assets/images/carousel2.png',
     title: 'Розклад та успішність ',
     description:
         'Переглядай свої оцінки, контролюй успішність та користуйся швидким доступом до розкладу викладачів та будь-якої групи',
   ),
-  SlideItem(
+  SlideModel(
     imageUrl: 'assets/images/carousel3.png',
     title: 'Відповіді на найпоширеніші питання',
     description:

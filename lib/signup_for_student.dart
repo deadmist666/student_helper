@@ -29,7 +29,11 @@ class SignUp extends StatelessWidget {
                 width: 327,
                 height: 327,
                 decoration: BoxDecoration(
-                  color: Colors.deepPurpleAccent,
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/carousel2.png'
+                    )
+                  )
                 ),
               ),
             ),
@@ -66,7 +70,7 @@ class SignUp extends StatelessWidget {
                 textInputAction: TextInputAction.done,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),         /// бордер радиус надо сделать
-                  labelText: 'Email',
+                  labelText: 'Email', labelStyle: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ),
@@ -76,7 +80,7 @@ class SignUp extends StatelessWidget {
                 fixedSize: MaterialStateProperty.all(Size(327, 49)),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)))
               ),
-                onPressed: () => null, child: Text('Продовжити',)),
+                onPressed: () => null, child: Text('Продовжити', style: TextStyle( fontFamily: 'Rubik', fontSize: 14, fontWeight: FontWeight.w600),)),
             
           ],
         ),

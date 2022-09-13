@@ -16,6 +16,37 @@ class MyApp extends StatelessWidget {
       title: 'Student Helper',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Color(0xFFFFFFFF),
+        textTheme: TextTheme(
+          headline1: TextStyle(
+            fontFamily: 'Rubik',
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Color(0xFF081E3F),
+          ),
+          headline2: TextStyle(
+            fontFamily: 'Rubik',
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            color: Color(0xFF333333),
+          ),
+          headline3: TextStyle(
+            fontFamily: 'Rubik',
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            color: Color(0xFF3C3C43).withOpacity(0.6),
+          ),
+          bodyText1: TextStyle(
+            fontFamily: 'Rubik',
+            fontWeight: FontWeight.normal,
+            fontSize: 14,
+          ),
+          bodyText2: TextStyle(
+            fontFamily: 'Rubik',
+            fontWeight: FontWeight.normal,
+            fontSize: 10,
+          ),
+        ),
       ),
       home: AnimatedSplashScreen(
         splashIconSize: 300,
@@ -30,7 +61,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       color: Color(0xFFFFFFFF),
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Arial',
+                      fontFamily: 'Rubik',
                       fontSize: 50),
                 ),
                 decoration: BoxDecoration(
@@ -41,7 +72,7 @@ class MyApp extends StatelessWidget {
                 'Помічник студента',
                 style: TextStyle(
                   color: Color(0xFF2D9CDB),
-                  fontFamily: 'Arial',
+                  fontFamily: 'Rubik',
                   fontSize: 24,
                 ),
               )

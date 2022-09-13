@@ -1,8 +1,10 @@
+
+
 import 'package:figma_design/signup_for_student.dart';
-import 'package:figma_design/slide.dart';
+import 'package:figma_design/models/slide.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'pages/news_page.dart';
+import 'pages/logged_in_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -42,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: slideList.length,
                     controller: _pageController,
                     itemBuilder: (context, index) {
-                      return carouselSlide(slideList[index]);
+                      return carouselSlide(slideList[index], context);
                     }),
               ),
               SizedBox(height: 50),
@@ -79,18 +81,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Color(0xFFFFFFFF),
+                  fontFamily: 'Rubik',
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
               )),
           TextButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => StartPage()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => StartPage()));
               },
               child: Text(
                 'Гостьовий перегляд',
                 style: TextStyle(
                   color: Color(0xFF2D9CDB),
+                  fontFamily: 'Rubik',
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
@@ -101,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-Widget carouselSlide(SlideItem item) {
+Widget carouselSlide(SlideModel item, BuildContext context) {
   return Column(
     children: [
       Container(
@@ -118,10 +122,7 @@ Widget carouselSlide(SlideItem item) {
       Text(
         item.title,
         textAlign: TextAlign.center,
-        style: TextStyle(
-            color: Color(0xFF081E3F),
-            fontSize: 24,
-            fontWeight: FontWeight.w700),
+        style: Theme.of(context).textTheme.headline1,
       ),
       SizedBox(
         height: 18,
@@ -138,4 +139,4 @@ Widget carouselSlide(SlideItem item) {
       )
     ],
   );
-} /*   */
+}
